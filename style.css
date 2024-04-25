@@ -77,18 +77,14 @@ nav label {
   color: #7cb2c7;
   font-size: 0.99rem;
 }
-.drop:hover .dropdown {
-  display: block;
-  opacity: 1;
-}
 
 /* <---hero section---> */
 #hero {
-  background: rgba(0, 0, 0, 0.4) url("/image/homeimg.jpg") no-repeat center
-    center/cover;
+  background: rgba(0, 0, 0, 0.4) url("image/homeimg.jpg") no-repeat center center/cover;
   height: 100vh;
   color: white;
   background-blend-mode: darken;
+  
 }
 
 #hero .container {
@@ -110,7 +106,7 @@ nav label {
 #hero .btn {
   border: 2px solid gray;
   border-radius: 10px;
-  padding: 20px;
+  padding: 17px;
   text-decoration: none;
   align-self: center;
   margin-top: 50px;
@@ -251,10 +247,9 @@ nav label {
 
 .service-box .box img {
   width: 320px;
-  height: 300px;
 }
 .testimorials {
-  background: rgba(0, 0, 0, 0.7) url("/image/testimonials-bg.jpg") no-repeat
+  background: rgba(0, 0, 0, 0.7) url("image/testimonials-bg.jpg") no-repeat
     center center/cover;
   height: 100vh;
   color: white;
@@ -323,15 +318,12 @@ nav label {
   margin-top: 3.8rem;
 }
 .item-img img {
-  height: 270px;
   width: 340px;
 }
 .portfolio-content {
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-gap: 10px;
-  position: relative;
-  top: 0;
   align-items: center;
   margin: 2rem 10rem;
 }
@@ -637,7 +629,7 @@ nav label {
 
 /* <--footer section---> */
 footer {
-  background: url("/image/footer-bg.jpg") no-repeat center center/cover;
+  background: url("image/footer-bg.jpg") no-repeat center center/cover;
   height: 100vh;
   color: white;
   flex-direction: column;
@@ -741,7 +733,6 @@ footer .container h5 {
     flex-direction: column;
     position: absolute;
     top: 70px;
-
     background-color: rgba(194, 196, 210, 0.6);
     width: 100%;
     text-align: center;
@@ -760,11 +751,11 @@ footer .container h5 {
 
   #hero .container {
     padding: 0px;
-    padding-top: 50px;
+    padding-top: 5rem;
   }
   #hero .container h1 {
     margin: 0px;
-    padding: 10px;
+    padding: 20px;
     font-size: 1.6rem;
     font-weight: 400px;
   }
@@ -777,7 +768,7 @@ footer .container h5 {
     font-size: 15px;
   }
 
-  .drop:hover .dropdown nav {
+  .drop:hover .dropdown {
     display: block;
     opacity: 0;
   }
@@ -801,6 +792,7 @@ footer .container h5 {
   footer .container {
     margin: 10px 1px;
     padding: 15px;
+    height: 100vh;
   }
   footer p {
     padding: 6px;
@@ -821,10 +813,21 @@ footer .container h5 {
     grid-template-columns: repeat(2,auto);
     padding: 10px;
   }
+  .service-box .box img {
+    width:100%;
+    height: 100%;
+  }
   .portfolio-content {
-    grid-template-columns: auto auto;
-    margin: 10px 20px;
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 5px;
+    align-items: center;
+    margin: 1rem;
+    padding:20px;
+  }
+  .item-img img {
+    width: 90%;
+    height: 90%;
   }
   .members {
     grid-template-columns: auto auto;
@@ -871,20 +874,32 @@ footer .container h5 {
     max-width: 100%;
     text-align: left;
   }
-  .header ul .dropdown {
-    display: none;
-  }
-  .header ul .dropdown li:hover {
-    color: #7cb2c7;
-    font-size: 0.99rem;
-  }
-  .drop:hover .dropdown {
-    display: block;
-    opacity: 0;
-  }
+  
   .testimorial-item {
     text-align: center;
     position: relative;
+    margin: 10px;
+  }
+  .box-content .box {
+    width: 100%;
+    height: 45%;
+    position: absolute;
+    top: 112px;
+    bottom: 0px;
+    left: 1px;
+    right: 10px;
+    margin:0;
+    text-align: center;
+    z-index: 10;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  .team-members:hover.box{
+    opacity: 0.9;
+  }
+  .team-members img {
+    width: 80%;
+    height: 80%;
     margin: 10px;
   }
 }
@@ -896,7 +911,7 @@ footer .container h5 {
 
   .portfolio-content {
     grid-template-columns: auto;
-    margin: 10px 20px;
+    margin: 10px 0px;
     text-align: center;
   }
   .members {
@@ -909,7 +924,7 @@ footer .container h5 {
   }
   .pricing-container {
     text-align: center;
-    margin: 10px;
+    margin: 20px;
   }
   .service-item {
     grid-template-columns: auto;
